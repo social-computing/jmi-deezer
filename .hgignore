@@ -1,0 +1,12 @@
+syntax: glob
+
+*~
+.classpath
+.settings
+.project
+.DS_Store
+.class
+.orig
+.metadata
+.jar
+.war
