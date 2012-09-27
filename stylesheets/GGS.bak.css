@@ -1,0 +1,409 @@
+/*
+*
+*  Golden Grid System (1.0)	<http://goldengridsystem.com/>
+*  by Joni Korpi 				<http://jonikorpi.com/>
+*  licensed under MIT			<http://opensource.org/licenses/mit-license.php>
+*
+*/
+/*
+*
+*  Margin, padding, and border resets
+*  except for form elements
+*
+*/
+/* line 27, ../sass/GGS..bak.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*
+*
+*  Consistency fixes
+*  adopted from http://necolas.github.com/normalize.css/
+*
+*/
+/* line 41, ../sass/GGS..bak.scss */
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 46, ../sass/GGS..bak.scss */
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+
+/* line 51, ../sass/GGS..bak.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section, audio, canvas, video {
+  display: block;
+}
+
+/* line 54, ../sass/GGS..bak.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 60, ../sass/GGS..bak.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 63, ../sass/GGS..bak.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 66, ../sass/GGS..bak.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 71, ../sass/GGS..bak.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 74, ../sass/GGS..bak.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 77, ../sass/GGS..bak.scss */
+input, textarea, button, select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+
+/* line 86, ../sass/GGS..bak.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+/* line 91, ../sass/GGS..bak.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 98, ../sass/GGS..bak.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 101, ../sass/GGS..bak.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+*
+*  Simple fluid media
+*
+*/
+/* line 113, ../sass/GGS..bak.scss */
+figure {
+  position: relative;
+}
+
+/* line 116, ../sass/GGS..bak.scss */
+figure img, figure object, figure embed, figure video {
+  max-width: 100%;
+  display: block;
+}
+
+/* line 120, ../sass/GGS..bak.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/*
+*
+*	Zoomable baseline grid
+*	type size presets
+*
+*/
+/* line 133, ../sass/GGS..bak.scss */
+body {
+  /* 16px / 24px */
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 139, ../sass/GGS..bak.scss */
+.small {
+  /* 13px / 18px */
+  font-size: 0.813em;
+  line-height: 1.385em;
+}
+
+/* line 145, ../sass/GGS..bak.scss */
+.normal, h3 {
+  /* 16px / 24px */
+  font-size: 1em;
+  line-height: 1.5em;
+  /* 24 */
+}
+
+/* line 151, ../sass/GGS..bak.scss */
+.large, h2, h1 {
+  /* 26 / 36px */
+  font-size: 1.625em;
+  line-height: 1.385em;
+}
+
+/* line 157, ../sass/GGS..bak.scss */
+.huge, .ie h1 {
+  /* 42px / 48px */
+  font-size: 2.625em;
+  line-height: 1.143em;
+}
+
+/* line 163, ../sass/GGS..bak.scss */
+.massive {
+  /* 68px / 72px */
+  font-size: 4.25em;
+  line-height: 1.059em;
+}
+
+/* line 169, ../sass/GGS..bak.scss */
+.gigantic {
+  /* 110px / 120px */
+  font-size: 6.875em;
+  line-height: 1.091em;
+}
+
+/*
+*
+*  Four-column grid active
+*  ----------------------------------------
+*  Margin   | #  1   2   3   4   |   Margin
+*  5.55555% | %  25  50  75  100 | 5.55555%
+*
+*/
+/* line 185, ../sass/GGS..bak.scss */
+footer, header, #twoway, #fway {
+  margin: 0 5.556%;
+}
+
+/* line 189, ../sass/GGS..bak.scss */
+footer {
+  clear: both;
+}
+
+/* line 194, ../sass/GGS..bak.scss */
+.footerSeparator {
+  background: url("../images/bg-decoupe.gif") repeat-x scroll 0 0 transparent;
+  display: block;
+  height: 14px;
+  margin: 25px 0 0;
+  width: 100%;
+  clear: both;
+}
+
+/* line 203, ../sass/GGS..bak.scss */
+h1, h2 {
+  margin: 0.923em 0 1.385em;
+}
+
+/* line 207, ../sass/GGS..bak.scss */
+h2 {
+  font-weight: normal;
+}
+
+/* line 211, ../sass/GGS..bak.scss */
+h3 {
+  margin: 1.5em 0 1.5em;
+}
+
+/*
+*  Simple elastic gutters
+*  Note: box-sizing will not work in IE6-7
+*/
+/* line 220, ../sass/GGS..bak.scss */
+.wrapper {
+  padding: 0 0.75em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+*
+*  Fixes for IE6-8
+*  http://jonikorpi.com/leaving-old-IE-behind/
+*
+*/
+/* line 236, ../sass/GGS..bak.scss */
+.ie body {
+  width: 40em;
+  margin: 0 auto;
+  font-size: 1.063em;
+}
+
+/* line 242, ../sass/GGS..bak.scss */
+.ie h1 {
+  margin: 1.143em 0 0.571em;
+}
+
+/* @media screen and (min-width: 640px) */
+@media screen and (min-width: 40em) {
+  /* line 250, ../sass/GGS..bak.scss */
+  body {
+    /* Zoom baseline grid to 17/16 = 1.0625 */
+    font-size: 1.063em;
+  }
+
+  /* line 255, ../sass/GGS..bak.scss */
+  h1 {
+    margin: 1.143em 0 0.571em;
+  }
+}
+/*
+*
+*  Eight-column grid active
+*  ----------------------------------------------------------------------
+*  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
+*  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
+*
+*
+*/
+/* @media screen and (min-width: 720px) */
+@media screen and (min-width: 45em) {
+  /* line 276, ../sass/GGS..bak.scss */
+  body {
+    /* Reset baseline grid to 16/16 = 1 */
+    font-size: 1em;
+  }
+
+  /* line 281, ../sass/GGS..bak.scss */
+  #twoway .wrapper {
+    float: left;
+    width: 50%;
+  }
+
+  /* line 287, ../sass/GGS..bak.scss */
+  #fway .wrapper {
+    float: left;
+    width: 25%;
+  }
+
+  /* line 292, ../sass/GGS..bak.scss */
+  footer .wrapper {
+    float: left;
+    width: 33.333%;
+  }
+}
+/* @media screen and (min-width: 888px) */
+@media screen and (min-width: 55.5em) {
+  /* line 302, ../sass/GGS..bak.scss */
+  body {
+    /* Zoom baseline grid to 17/16 = 1.0625 */
+    font-size: 1.063em;
+  }
+}
+/* @media screen and (min-width: 984px) */
+@media screen and (min-width: 61.5em) {
+  /* line 312, ../sass/GGS..bak.scss */
+  body {
+    /* Reset baseline grid to 16/16 = 1.0 */
+    font-size: 1em;
+  }
+
+  /* line 317, ../sass/GGS..bak.scss */
+  footer, header, #twoway, #fway {
+    margin: 0 16.667%;
+  }
+}
+/* @media screen and (min-width: 1200px) */
+@media screen and (min-width: 75em) {
+  /* line 326, ../sass/GGS..bak.scss */
+  body {
+    /* Zoom baseline grid to 17/16 = 1.0625 */
+    font-size: 1.063em;
+  }
+}
+/* @media screen and (min-width: 1392px) */
+@media screen and (min-width: 87em) {
+  /* line 337, ../sass/GGS..bak.scss */
+  body {
+    /* Reset baseline grid to 16/16 = 1.0 */
+    font-size: 1em;
+  }
+
+  /* line 342, ../sass/GGS..bak.scss */
+  footer, header, #twoway, #fway {
+    margin: 0 27.778%;
+  }
+}
+/* @media screen and (min-width: 1680px) */
+@media screen and (min-width: 105em) {
+  /* line 352, ../sass/GGS..bak.scss */
+  body {
+    /* Zoom baseline grid to 17/16 = 1.0625 */
+    font-size: 1.063em;
+  }
+}
+/*
+*
+*  Sixteen-column grid active
+*  ----------------------------------------------------------------------------------------------------------------------
+*  Margin   | #  1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    16  |   Margin
+*  5.55555% | %  6.25  12.5  18.75 25.0  31.25 37.5  43.75 50.0  56.25 62.5  68.75 75.0  81.25 87.5  93.75 100 | 5.55555%
+*
+*
+*/
+/* @media screen and (min-width: 1872px) */
+@media screen and (min-width: 117em) {
+  /* line 373, ../sass/GGS..bak.scss */
+  header, #twoway {
+    margin: 0 5.556%;
+  }
+
+  /* line 377, ../sass/GGS..bak.scss */
+  header .wrapper {
+    width: 37.5%;
+    margin-left: 25%;
+  }
+
+  /* line 382, ../sass/GGS..bak.scss */
+  #twoway .wrapper {
+    width: 25%;
+  }
+
+  /* line 386, ../sass/GGS..bak.scss */
+  #twoway .wrapper:first-child {
+    margin-left: 25%;
+  }
+}
+/* @media screen and (min-width: 2080px) */
+@media screen and (min-width: 130em) {
+  /* line 396, ../sass/GGS..bak.scss */
+  body {
+    /* Zoom baseline grid to 18/16 = 1.125 */
+    font-size: 1.125em;
+    max-width: 160 em;
+  }
+}
