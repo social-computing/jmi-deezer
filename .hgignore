@@ -10,3 +10,4 @@ syntax: glob
 .metadata
 .jar
 .war
+.sass-cache
